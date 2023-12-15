@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "array-gpio": "^1.7.2"
+  },
+  "name": "watchdog",
+  "description": "This is a simple watchdog app that monitors various services on the network and power cycles them if they are not responding.",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewmcdan/watchdog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrewmcdan/watchdog/issues"
+  },
+  "homepage": "https://github.com/andrewmcdan/watchdog#readme"
+}
