@@ -19,5 +19,6 @@
   "bugs": {
     "url": "https://github.com/andrewmcdan/watchdog/issues"
   },
-  "homepage": "https://github.com/andrewmcdan/watchdog#readme"
+  "homepage": "https://github.com/andrewmcdan/watchdog#readme",
+  "type": "module"
 }

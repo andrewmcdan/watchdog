@@ -1,12 +1,14 @@
 // TODO: Webserver for monitoring
 
-const raspberry = require('array-gpio');
+import ArrayGpio from 'array-gpio';
 
 console.log('start');
 
+const pins_lut = [null,28,3,5,7,29,31,26,24,21,19,23,32,33,8,10,36,11,12,35,38,40,15,16,18,22,37,13]
+
 class RasPiOutputManager {
     constructor(pin) {
-        this.output = raspberry.out(pin);
+        this.output = ArrayGpio.output(pin);
     }
 
     setOn() {
@@ -25,7 +27,7 @@ class RasPiOutputManager {
 }
 
 let outputs = [];
-for (let i = 0; i < 16; i++) {
+for (let i = 1; i <= 16; i++) {
     outputs.push(new RasPiOutputManager(i));
 }
 
@@ -76,3 +78,5 @@ function waitSeconds(seconds) {
         setTimeout(() => { resolve(); }, seconds * 1000);
     });
 }
+
+
