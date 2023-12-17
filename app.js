@@ -50,8 +50,7 @@ class ServiceMonitor {
 
     async reboot() {
         this.outputPin.setOff();
-        if (this.config.rebootDelay === undefined || this.config.rebootDelay === null) await waitSeconds(30);
-        else await waitSeconds(this.config.rebootDelay);
+        await waitSeconds(this.config.rebootDelay ?? 30);
         this.outputPin.setOn();
     }
 }
@@ -71,7 +70,7 @@ let exampleconfig = {
     rebootDelay_seconds: 60, // how long to wait between turning off the device and turning it back on
 };
 
-
+let testService = new ServiceMonitor(outputs[0], exampleconfig);
 
 function waitSeconds(seconds) {
     return new Promise((resolve) => {
